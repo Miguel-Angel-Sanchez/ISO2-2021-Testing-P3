@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>problema3.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Testing_P3</a> &gt; <a href="index.source.html" class="el_package">C01.Testing_P3</a> &gt; <span class="el_source">problema3.java</span></div><h1>problema3.java</h1><pre class="source lang-java linenums">package C01.Testing_P3;
+
+<span class="nc" id="L3">public class problema3{</span>
+    public static void main(String[] args) {
+       
+<span class="nc" id="L6">    	certificado(71,74,79,14, 72, 73, 74, 75);</span>
+<span class="nc" id="L7">    	certificado(5,5,5,5,5,5,5,5);</span>
+        
+<span class="nc" id="L9">    }</span>
+    public static void certificado(int completitud, int correccion, int pertinencia, int modularidad,
+    int reusabilidad,int analizabilidad,int modificado,int probado){
+        
+<span class="nc" id="L13">    	certificacion c=new certificacion();</span>
+        
+    	
+<span class="nc" id="L16">    	int[] datos_adecuacion = { completitud, correccion, pertinencia };</span>
+<span class="nc" id="L17">        int[] datos_mantenibilidad = {modularidad,reusabilidad,analizabilidad,modificado,probado};</span>
+<span class="nc" id="L18">        int[][] tabla_adecuacion = { { 0, 0, 0 }, { 1, 1, 2 }, { 2, 1, 2 }, { 2, 2, 3 }, { 3, 3, 4 }, { 4, 5, 5 } };</span>
+<span class="nc" id="L19">        int[][] tabla_mantenibilidad = { { 0, 0, 0, 0, 0 }, { 1, 1, 0, 1, 1 }, { 2, 2, 1, 2, 1 }, { 2, 2, 2, 3, 2 },</span>
+                { 3, 3, 3, 4, 4 }, { 4, 5, 5, 5, 4 } };
+<span class="nc" id="L21">        int[][] tabla_global = { { 1, 1, 1, 1, 1 }, { 1, 2, 2, 2, 2 }, { 2, 2, 3, 3, 3 }, { 3, 3, 3, 3, 4 },{ 3, 3, 4, 4, 5 } };</span>
+
+<span class="nc" id="L23">        int adecuacion = c.calculo_minimo(c.calculo_certificacion(datos_adecuacion, tabla_adecuacion));</span>
+<span class="nc" id="L24">        int mantenibilidad = c.calculo_minimo(c.calculo_certificacion(datos_mantenibilidad, tabla_mantenibilidad));</span>
+<span class="nc bnc" id="L25" title="All 4 branches missed.">        if (adecuacion != 0 &amp;&amp; mantenibilidad != 0) {</span>
+<span class="nc" id="L26">            int certificacion = tabla_global[(adecuacion - 1)][(mantenibilidad - 1)];</span>
+<span class="nc bnc" id="L27" title="All 2 branches missed.">            if (certificacion &gt;= 3)</span>
+<span class="nc" id="L28">                System.out.println(&quot;La certificacion es &quot; + certificacion + &quot;, se concede&quot;);</span>
+            else
+<span class="nc" id="L30">                System.out.println(&quot;La certificacion es &quot; + certificacion + &quot;, no se concede&quot;);</span>
+        }
+<span class="nc" id="L32">    } </span>
+    
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
