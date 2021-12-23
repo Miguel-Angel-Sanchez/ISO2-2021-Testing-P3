@@ -4,6 +4,7 @@ public class problema3{
     public static void main(String[] args) {
        
     	certificado(71,74,79,14, 72, 73, 74, 75);
+    	certificado(5,5,5,5,5,5,5,5);
         
     }
     public static void certificado(int completitud, int correccion, int pertinencia, int modularidad,

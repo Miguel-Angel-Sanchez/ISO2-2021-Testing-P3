@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: org.javahispano.tutorial_maven.certificacionTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.078 s <<< FAILURE! - in org.javahispano.tutorial_maven.certificacionTest
+initializationError(org.javahispano.tutorial_maven.certificacionTest)  Time elapsed: 0.009 s  <<< ERROR!
+java.lang.Exception: Method calculo_certificacion() should be void
+
+initializationError(org.javahispano.tutorial_maven.certificacionTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.Exception: Method calculo_certificacion should have no parameters
+
+initializationError(org.javahispano.tutorial_maven.certificacionTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.Exception: Method calculo_minimo() should be void
+
+initializationError(org.javahispano.tutorial_maven.certificacionTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.Exception: Method calculo_minimo should have no parameters
+

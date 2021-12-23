@@ -5,8 +5,21 @@ import org.junit.Test;
 public class problema3Test {
 		@Test
 	   public void main() {
-	       
+			
+	       //Cada uno es un caso de prueba
 	    	certificado(71,74,79,14, 72, 73, 74, 75);
+	    	certificado(5,5,5,5,5,5,5,5);
+	    	certificado(-10,-10,-10,-10,-10,-10,-10,-10);
+	    	certificado(11,11,11,11,11,11,11,11);
+	    	certificado(9,9,9,9,9,9,9,9);
+	    	certificado(45,45,45,45,45,45,45,45);
+	    	certificado(53,53,53,53,53,53,53,53);
+	    	certificado(69,69,69,69,69,69,69,69);
+	    	certificado(51,51,51,51,51,51,51,51);
+	    	certificado(78,78,78,78,78,78,78,78);
+	    	certificado(95,95,95,95,95,95,95,95);
+	    	certificado(36,36,36,36,36,36,36,36);
+	    	certificado(120,120,120,120,120,120,120,120);
 	        
 	    }
 
@@ -33,6 +46,8 @@ public class problema3Test {
 	                System.out.println("La certificacion es " + certificacion + ", se concede");
 	            else
 	                System.out.println("La certificacion es " + certificacion + ", no se concede");
+	        }else {
+	        	System.out.println("Los valores introducidos no corresponden a ningun valor en la tabla global");
 	        }
 	    } 
 	    
